@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Setup form submission
     document.getElementById('saveTheDateForm').addEventListener('submit', handleFormSubmit);
+
+    // Setup expand/collapse on mobile
+    const expandPrompt = document.getElementById('expandPrompt');
+    const formSection = document.getElementById('formSection');
+    expandPrompt.addEventListener('click', function() {
+        expandPrompt.classList.toggle('expanded');
+        formSection.classList.toggle('expanded');
+    });
 });
 
 // Handle form submission
