@@ -4,11 +4,7 @@ const CONFIG = {
     apiEndpoint: 'YOUR_API_ENDPOINT_HERE', // Will be updated when backend is ready
     turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX', // Get this from Cloudflare Turnstile
     carouselImages: [
-        'https://placehold.co/1920x1080/9caf88/ffffff?text=Photo+1',
-        'https://placehold.co/1920x1080/b8c9a8/ffffff?text=Photo+2',
-        'https://placehold.co/1920x1080/7a8f6f/ffffff?text=Photo+3',
-        'https://placehold.co/1920x1080/d4a5a5/ffffff?text=Photo+4',
-        'https://placehold.co/1920x1080/9caf88/ffffff?text=Photo+5'
+        './images/_21A9712.jpg',
     ],
     carouselAutoplayInterval: 4000 // milliseconds
 };
@@ -41,7 +37,7 @@ function initCarousel() {
         slide.className = 'carousel-slide' + (index === 0 ? ' active' : '');
         const img = document.createElement('img');
         img.src = imagePath;
-        img.alt = `Christopher and Stephanie - Photo ${index + 1}`;
+        img.alt = `Christopher Roy and Stephanie Goyer Enriquez - Photo ${index + 1}`;
         slide.appendChild(img);
         slidesContainer.appendChild(slide);
 

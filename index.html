@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save the Date</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
+        <!-- Top corner decorations -->
+        <svg class="corner-decoration top-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 Q20,0 40,10 T60,30 T70,50 Q75,60 80,65 L70,70 Q60,65 50,55 T30,35 T10,20 Q0,15 0,0" fill="var(--gold)" opacity="0.3"/>
+            <circle cx="15" cy="15" r="3" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="35" cy="25" r="2" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="50" cy="40" r="2.5" fill="var(--gold)" opacity="0.5"/>
+        </svg>
+        <svg class="corner-decoration top-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,0 Q80,0 60,10 T40,30 T30,50 Q25,60 20,65 L30,70 Q40,65 50,55 T70,35 T90,20 Q100,15 100,0" fill="var(--gold)" opacity="0.3"/>
+            <circle cx="85" cy="15" r="3" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="65" cy="25" r="2" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="50" cy="40" r="2.5" fill="var(--gold)" opacity="0.5"/>
+        </svg>
+
         <header>
+            <svg class="floral-accent header-floral" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100,5 Q95,15 90,20 T80,25 M100,5 Q105,15 110,20 T120,25" stroke="var(--cream)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                <circle cx="100" cy="5" r="3" fill="var(--gold)" opacity="0.8"/>
+                <circle cx="90" cy="20" r="2" fill="var(--cream)" opacity="0.5"/>
+                <circle cx="110" cy="20" r="2" fill="var(--cream)" opacity="0.5"/>
+                <path d="M85,25 Q80,28 75,30 M115,25 Q120,28 125,30" stroke="var(--cream)" stroke-width="1" fill="none" opacity="0.4"/>
+            </svg>
             <h1>Save the Date</h1>
-            <p class="names">Christopher & Stephanie</p>
+            <p class="names">Christopher Roy & Stephanie Goyer Enriquez</p>
+            <svg class="divider-ornament" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                <line x1="10" y1="10" x2="85" y2="10" stroke="var(--cream)" stroke-width="1" opacity="0.5"/>
+                <circle cx="100" cy="10" r="4" fill="none" stroke="var(--gold)" stroke-width="1.5"/>
+                <circle cx="100" cy="10" r="2" fill="var(--gold)" opacity="0.8"/>
+                <line x1="115" y1="10" x2="190" y2="10" stroke="var(--cream)" stroke-width="1" opacity="0.5"/>
+            </svg>
             <p class="subtitle">We're getting married!</p>
         </header>
 
@@ -27,16 +57,48 @@
 
                     <!-- Date overlay -->
                     <div class="date-overlay">
+                        <svg class="date-decoration-top" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50,10 L150,10 M250,10 L350,10" stroke="var(--olive-green)" stroke-width="1" opacity="0.5"/>
+                            <circle cx="170" cy="10" r="3" fill="var(--gold)" opacity="0.7"/>
+                            <circle cx="200" cy="10" r="5" fill="var(--burgundy)" opacity="0.5"/>
+                            <circle cx="230" cy="10" r="3" fill="var(--gold)" opacity="0.7"/>
+                            <path d="M185,10 Q190,6 195,10 M205,10 Q210,6 215,10" stroke="var(--olive-green)" stroke-width="1.5" fill="none" opacity="0.4"/>
+                        </svg>
                         <p class="date-label">Mark Your Calendar</p>
                         <p class="wedding-date" id="weddingDate">TBD</p>
                         <p class="location">Le Mont Blanc</p>
                         <p class="location-detail">Laval, Quebec</p>
+                        <svg class="date-decoration-bottom" viewBox="0 0 300 15" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100,7.5 Q125,3 150,7.5 T200,7.5" stroke="var(--olive-green)" stroke-width="1" fill="none" opacity="0.4"/>
+                            <circle cx="150" cy="7.5" r="2.5" fill="var(--burgundy)" opacity="0.4"/>
+                        </svg>
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
+                <svg class="floral-accent form-floral-left" viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40,20 Q35,30 30,40 Q25,50 20,60 Q15,70 10,80" stroke="var(--olive-green)" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="38" cy="25" r="4" fill="var(--olive-light)" opacity="0.4"/>
+                    <circle cx="32" cy="40" r="3.5" fill="var(--burgundy)" opacity="0.3"/>
+                    <circle cx="25" cy="55" r="4.5" fill="var(--gold)" opacity="0.4"/>
+                    <circle cx="18" cy="70" r="3" fill="var(--olive-light)" opacity="0.4"/>
+                    <path d="M38,25 Q42,22 45,20 M32,40 Q28,38 25,37 M25,55 Q22,52 20,50" stroke="var(--olive-green)" stroke-width="1.5" fill="none" opacity="0.3"/>
+                </svg>
+                <svg class="floral-accent form-floral-right" viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,20 Q25,30 30,40 Q35,50 40,60 Q45,70 50,80" stroke="var(--olive-green)" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="22" cy="25" r="4" fill="var(--olive-light)" opacity="0.4"/>
+                    <circle cx="28" cy="40" r="3.5" fill="var(--burgundy)" opacity="0.3"/>
+                    <circle cx="35" cy="55" r="4.5" fill="var(--gold)" opacity="0.4"/>
+                    <circle cx="42" cy="70" r="3" fill="var(--olive-light)" opacity="0.4"/>
+                    <path d="M22,25 Q18,22 15,20 M28,40 Q32,38 35,37 M35,55 Q38,52 40,50" stroke="var(--olive-green)" stroke-width="1.5" fill="none" opacity="0.3"/>
+                </svg>
                 <h2>Stay Updated</h2>
+                <svg class="divider-ornament small-divider" viewBox="0 0 150 15" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="7.5" x2="60" y2="7.5" stroke="var(--olive-green)" stroke-width="1" opacity="0.4"/>
+                    <path d="M70,7.5 Q72,4 75,7.5 T80,7.5" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    <line x1="90" y1="7.5" x2="140" y2="7.5" stroke="var(--olive-green)" stroke-width="1" opacity="0.4"/>
+                </svg>
                 <p class="form-intro">Enter your details to receive the full invitation when it's ready</p>
 
                 <form id="saveTheDateForm">
@@ -62,8 +124,28 @@
         </main>
 
         <footer>
+            <svg class="footer-decoration" viewBox="0 0 300 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,15 Q100,5 150,15 T250,15" stroke="var(--olive-green)" stroke-width="1" fill="none" opacity="0.3"/>
+                <circle cx="150" cy="15" r="3" fill="var(--burgundy)" opacity="0.4"/>
+                <circle cx="100" cy="12" r="2" fill="var(--gold)" opacity="0.3"/>
+                <circle cx="200" cy="12" r="2" fill="var(--gold)" opacity="0.3"/>
+            </svg>
             <p>We can't wait to celebrate with you!</p>
         </footer>
+
+        <!-- Bottom corner decorations -->
+        <svg class="corner-decoration bottom-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,100 Q20,100 40,90 T60,70 T70,50 Q75,40 80,35 L70,30 Q60,35 50,45 T30,65 T10,80 Q0,85 0,100" fill="var(--gold)" opacity="0.3"/>
+            <circle cx="15" cy="85" r="3" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="35" cy="75" r="2" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="50" cy="60" r="2.5" fill="var(--gold)" opacity="0.5"/>
+        </svg>
+        <svg class="corner-decoration bottom-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,100 Q80,100 60,90 T40,70 T30,50 Q25,40 20,35 L30,30 Q40,35 50,45 T70,65 T90,80 Q100,85 100,100" fill="var(--gold)" opacity="0.3"/>
+            <circle cx="85" cy="85" r="3" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="65" cy="75" r="2" fill="var(--burgundy)" opacity="0.4"/>
+            <circle cx="50" cy="60" r="2.5" fill="var(--gold)" opacity="0.5"/>
+        </svg>
     </div>
 
     <script src="script.js"></script>
