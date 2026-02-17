@@ -1,34 +1,23 @@
 # Save the Date - Christopher & Stephanie
 
-A simple and elegant save-the-date website for our wedding at Le Mont Blanc, Laval, Quebec.
+A beautiful save-the-date website for our wedding at Le Mont Blanc, Laval, Quebec with a full-page photo background.
 
 ## Setup Instructions
 
-### 1. Add Your Photos
+### 1. Background Photo
 
-The carousel currently uses placeholder images. To add your own photos:
+The website uses a single photo as a full-page background. Your photo should be:
+- High resolution (minimum 1920x1080 pixels recommended)
+- Landscape orientation works best
+- Named `_21A9712.jpg` and placed in the `images/` folder (or update line 20 of `styles.css` with your photo filename)
 
-1. Add 5 photos of you as a couple to the `images` folder
-2. Name them: `photo1.jpg`, `photo2.jpg`, `photo3.jpg`, `photo4.jpg`, `photo5.jpg`
-3. Recommended size: 1200x900 pixels (4:3 aspect ratio)
-4. Update `script.js` line 5-9 to replace the placeholder URLs with your local image paths:
-   ```javascript
-   carouselImages: [
-       'images/photo1.jpg',
-       'images/photo2.jpg',
-       'images/photo3.jpg',
-       'images/photo4.jpg',
-       'images/photo5.jpg'
-   ],
-   ```
-
-If you want to use different names or add more/fewer photos, edit the `carouselImages` array in `script.js`.
+**Important:** The content box appears in the top-left corner, so make sure important elements of your photo (like faces) are positioned in the bottom-right area of the image.
 
 ### 2. Update the Wedding Date
 
-Open `script.js` and update line 3:
+The wedding date is already set to August 28, 2026. To change it, open `script.js` and update line 3:
 ```javascript
-weddingDate: 'June 15, 2026', // Change to your actual date
+weddingDate: 'Your Date Here', // Change to your actual date
 ```
 
 ### 3. Test Locally
@@ -68,40 +57,47 @@ with your Secret Key and the token.
 
 ## Features
 
-- ✨ Beautiful sage green gradient design
-- 📸 Large auto-rotating image carousel with overlaid date information
+- 📸 Full-page background image
+- 🎨 Content box positioned in top-left with semi-transparent background
+- ✨ Olive green, burgundy, and gold color scheme
 - 📧 Email collection form with validation
 - 🔒 Cloudflare Turnstile CAPTCHA (free, privacy-friendly)
-- 📱 Mobile-responsive design (16:9 on desktop, 4:3 on mobile)
-- 💻 Wide layout for desktop with full-width images
-- 🎨 Easy to customize colors and styling
-- 🌟 Semi-transparent overlay for date information with backdrop blur
+- 📱 Mobile-responsive design
+- 💻 Clean, elegant typography with Cormorant and Lato fonts
+- 🌟 Backdrop blur effect on content box for better readability
 
 ## Customization
 
 ### Change Colors
 
 The site uses CSS custom properties (variables) defined at the top of `styles.css`:
-- `--sage-green`: Primary sage green color
-- `--sage-dark`: Darker sage for accents
-- `--sage-light`: Light sage for gradients
-- `--cream`: Cream background color
-- `--dusty-rose`: Complementary dusty rose color
+- `--olive-green`: Primary olive green color
+- `--olive-dark`: Darker olive for gradients
+- `--olive-light`: Light olive for accents
+- `--burgundy`: Burgundy accent color
+- `--gold`: Gold accent color
+- `--cream`: Cream color
+- `--text-dark`: Dark text color
 
 Edit these values in the `:root` section of `styles.css` to customize your color scheme.
 
-### Carousel Settings
+### Change Background Image
 
-In `script.js`, you can adjust:
-- `carouselAutoplayInterval`: Speed of auto-rotation (default: 4000ms)
-- `carouselImages`: Array of image paths
-- Recommended image size: 1920x1080 pixels (16:9 ratio) for best quality on desktop
+In `styles.css` line 20, update the background image path:
+```css
+background: url('images/YOUR_IMAGE.jpg') no-repeat center center;
+```
 
-### Overlay Customization
+### Adjust Content Box Position
 
-In `styles.css`, you can adjust the date overlay appearance:
-- `.date-overlay`: Change opacity, padding, or background blur
-- Current setting: 95% opaque white with 10px blur for readability
+By default, the content box is positioned in the top-left. To change its position, modify the `body` padding in `styles.css` around line 24.
+
+### Content Box Transparency
+
+To adjust the transparency of the white content box, modify line 36 in `styles.css`:
+```css
+background: rgba(255, 255, 255, 0.95); /* Change 0.95 to adjust opacity (0.0-1.0) */
+```
 
 ## File Structure
 
@@ -110,11 +106,7 @@ save-the-date/
 ├── index.html          # Main HTML structure
 ├── styles.css          # Styling
 ├── script.js           # JavaScript functionality
-├── images/             # Your photos go here
-│   ├── photo1.jpg
-│   ├── photo2.jpg
-│   ├── photo3.jpg
-│   ├── photo4.jpg
-│   └── photo5.jpg
+├── images/             # Your photo goes here
+│   └── _21A9712.jpg    # Background image
 └── README.md           # This file
 ```

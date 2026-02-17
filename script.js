@@ -1,103 +1,18 @@
 // Configuration
 const CONFIG = {
-    weddingDate: 'August 28, 2026', // Update this with your actual wedding date
+    weddingDate: 'August 28, 2026',
     apiEndpoint: 'YOUR_API_ENDPOINT_HERE', // Will be updated when backend is ready
-    turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX', // Get this from Cloudflare Turnstile
-    carouselImages: [
-        './images/_21A9712.jpg',
-    ],
-    carouselAutoplayInterval: 4000 // milliseconds
+    turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX'
 };
-
-// Carousel state
-let currentSlide = 0;
-let carouselInterval;
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     // Set wedding date
     document.getElementById('weddingDate').textContent = CONFIG.weddingDate;
 
-    // Initialize carousel
-    initCarousel();
-
     // Setup form submission
     document.getElementById('saveTheDateForm').addEventListener('submit', handleFormSubmit);
 });
-
-// Initialize the image carousel
-function initCarousel() {
-    const slidesContainer = document.getElementById('carouselSlides');
-    const dotsContainer = document.getElementById('carouselDots');
-
-    // Create slides and dots
-    CONFIG.carouselImages.forEach((imagePath, index) => {
-        // Create slide
-        const slide = document.createElement('div');
-        slide.className = 'carousel-slide' + (index === 0 ? ' active' : '');
-        const img = document.createElement('img');
-        img.src = imagePath;
-        img.alt = `Christopher Roy and Stephanie Goyer Enriquez - Photo ${index + 1}`;
-        slide.appendChild(img);
-        slidesContainer.appendChild(slide);
-
-        // Create dot
-        const dot = document.createElement('button');
-        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    // Setup navigation buttons
-    document.getElementById('prevBtn').addEventListener('click', previousSlide);
-    document.getElementById('nextBtn').addEventListener('click', nextSlide);
-
-    // Start autoplay
-    startCarouselAutoplay();
-
-    // Pause autoplay on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    carouselContainer.addEventListener('mouseenter', stopCarouselAutoplay);
-    carouselContainer.addEventListener('mouseleave', startCarouselAutoplay);
-}
-
-function goToSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    // Remove active class from current slide and dot
-    slides[currentSlide].classList.remove('active');
-    dots[currentSlide].classList.remove('active');
-
-    // Set new current slide
-    currentSlide = index;
-
-    // Add active class to new slide and dot
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
-}
-
-function nextSlide() {
-    const nextIndex = (currentSlide + 1) % CONFIG.carouselImages.length;
-    goToSlide(nextIndex);
-}
-
-function previousSlide() {
-    const prevIndex = (currentSlide - 1 + CONFIG.carouselImages.length) % CONFIG.carouselImages.length;
-    goToSlide(prevIndex);
-}
-
-function startCarouselAutoplay() {
-    stopCarouselAutoplay();
-    carouselInterval = setInterval(nextSlide, CONFIG.carouselAutoplayInterval);
-}
-
-function stopCarouselAutoplay() {
-    if (carouselInterval) {
-        clearInterval(carouselInterval);
-    }
-}
 
 // Handle form submission
 async function handleFormSubmit(e) {
