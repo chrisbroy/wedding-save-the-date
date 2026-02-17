@@ -337,6 +337,15 @@ body {
     box-shadow: 0 0 0 3px rgba(107, 127, 60, 0.1);
 }
 
+.form-group input:disabled {
+    background-color: transparent;
+    color: inherit;
+    border-color: #e0e0e0;
+    cursor: default;
+    opacity: 1;
+    -webkit-text-fill-color: inherit;
+}
+
 .cf-turnstile {
     display: flex;
     justify-content: center;

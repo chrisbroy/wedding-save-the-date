@@ -46,6 +46,8 @@ async function handleFormSubmit(e) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
 
+    let submitted = false;
+
     try {
         // Submit to backend
         const response = await fetch(CONFIG.apiEndpoint, {
@@ -62,9 +64,12 @@ async function handleFormSubmit(e) {
         });
 
         if (response.ok) {
+            submitted = true;
+            document.getElementById('name').disabled = true;
+            document.getElementById('email').disabled = true;
+            document.getElementById('turnstile-widget').style.display = 'none';
+            submitBtn.style.display = 'none';
             showMessage('Thank you! We\'ll send you the invitation when it\'s ready.', 'success');
-            document.getElementById('saveTheDateForm').reset();
-            turnstile.reset();
         } else {
             throw new Error('Failed to submit');
         }
@@ -73,8 +78,10 @@ async function handleFormSubmit(e) {
         showMessage('Oops! Something went wrong. Please try again later.', 'error');
         turnstile.reset();
     } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Notify Me';
+        if (!submitted) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Notify Me';
+        }
     }
 }
 
