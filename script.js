@@ -1,6 +1,6 @@
 // Configuration
 const CONFIG = {
-    weddingDate: 'June 15, 2026', // Update this with your actual wedding date
+    weddingDate: 'August 28, 2026', // Update this with your actual wedding date
     apiEndpoint: 'YOUR_API_ENDPOINT_HERE', // Will be updated when backend is ready
     turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX', // Get this from Cloudflare Turnstile
     carouselImages: [
