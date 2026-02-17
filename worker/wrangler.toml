@@ -1,0 +1,8 @@
+name = "save-the-date-worker"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "save-the-date-db"
+database_id = "01ab5533-f776-44fe-a810-30bf5bc48093" # Replace with the ID from: wrangler d1 create save-the-date-db

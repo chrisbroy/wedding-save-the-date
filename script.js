@@ -1,7 +1,7 @@
 // Configuration
 const CONFIG = {
     weddingDate: 'August 28, 2026',
-    apiEndpoint: 'YOUR_API_ENDPOINT_HERE', // Will be updated when backend is ready
+    apiEndpoint: 'https://save-the-date-worker.chrisbroy96.workers.dev', // e.g. https://save-the-date-worker.YOUR-SUBDOMAIN.workers.dev
     turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX'
 };
 

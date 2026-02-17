@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Cloudflare Workers
+worker/node_modules/
+worker/.wrangler/
+
+# Local secrets for wrangler dev (never commit these)
+worker/.dev.vars
