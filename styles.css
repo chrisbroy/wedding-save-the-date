@@ -64,7 +64,8 @@ body {
 
 @media (max-width: 768px) {
     .tagline {
-        font-size: 0.85rem;
+        font-size: 1.2rem;
+        font-weight: 800;
         margin-bottom: 5px;
         letter-spacing: 3px;
     }
