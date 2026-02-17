@@ -26,9 +26,10 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding: 20px;
+        padding: 0;
         background-attachment: fixed;
-        background-position: 72% center;
+        background-position: 65% 100%;
+        background-size: auto 80%;
     }
 }
 
@@ -45,8 +46,9 @@ body {
     .content-box {
         max-width: 100%;
         padding: 20px;
-        max-height: 50vh;
-        overflow-y: auto;
+        border-radius: 0;
+        max-height: none;
+        overflow-y: visible;
     }
 }
 
