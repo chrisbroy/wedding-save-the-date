@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Date</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Save the Date</h1>
+            <p class="names">Christopher & Stephanie</p>
+            <p class="subtitle">We're getting married!</p>
+        </header>
+
+        <main>
+            <div class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <!-- Images will be loaded by JavaScript -->
+                    </div>
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous image">‹</button>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next image">›</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+
+                    <!-- Date overlay -->
+                    <div class="date-overlay">
+                        <p class="date-label">Mark Your Calendar</p>
+                        <p class="wedding-date" id="weddingDate">TBD</p>
+                        <p class="location">Le Mont Blanc</p>
+                        <p class="location-detail">Laval, Quebec</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Stay Updated</h2>
+                <p class="form-intro">Enter your details to receive the full invitation when it's ready</p>
+
+                <form id="saveTheDateForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="cf-turnstile" id="turnstile-widget" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Notify Me</button>
+
+                    <div id="message" class="message"></div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>We can't wait to celebrate with you!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
