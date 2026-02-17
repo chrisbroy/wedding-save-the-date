@@ -51,6 +51,7 @@ async function verifyTurnstile(token, ip, secretKey) {
         body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip }),
     });
     const data = await res.json();
+    console.log('Turnstile response:', JSON.stringify(data));
     return data.success === true;
 }
 
