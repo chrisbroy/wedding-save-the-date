@@ -17,7 +17,7 @@
 body {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
-    background: url('./images/_21A9712.jpg') no-repeat center center;
+    background: url('images/_21A9712.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-dark);
@@ -29,6 +29,7 @@ body {
         padding: 20px;
         background-attachment: fixed;
         background-position: 72% center;
+        background-size: 125%;
     }
 }
 
