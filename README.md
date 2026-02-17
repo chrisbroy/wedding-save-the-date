@@ -31,25 +31,11 @@ Open `script.js` and update line 3:
 weddingDate: 'June 15, 2026', // Change to your actual date
 ```
 
-### 3. Set Up Cloudflare Turnstile (Free CAPTCHA)
-
-1. Go to [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile) (free account)
-2. Click "Add Site"
-3. Enter your domain (or use "localhost" for testing)
-4. Choose "Managed" mode
-5. Copy your Site Key
-6. Update two places:
-   - In `index.html` line 40: Replace `YOUR_SITE_KEY_HERE` with your Site Key
-   - In `script.js` line 5: Replace `YOUR_SITE_KEY_HERE` with your Site Key
-7. Copy your Secret Key for backend verification (you'll need this later)
-
-Note: Turnstile is completely free with no limits and more privacy-friendly than reCAPTCHA.
-
-### 4. Test Locally
+### 3. Test Locally
 
 Simply open `index.html` in your web browser to see the website.
 
-### 5. Deploy to GitHub Pages
+### 4. Deploy to GitHub Pages
 
 1. Create a new repository on GitHub
 2. Push these files to the repository:
@@ -66,7 +52,7 @@ Simply open `index.html` in your web browser to see the website.
 5. Select "main" branch as the source
 6. Your site will be available at: `https://YOUR_USERNAME.github.io/REPO_NAME/`
 
-### 6. Connect the Backend (Later)
+### 5. Connect the Backend (Later)
 
 Once you have a backend service ready to collect email submissions:
 1. Update the `apiEndpoint` in `script.js` (line 4)

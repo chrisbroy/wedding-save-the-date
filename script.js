@@ -2,7 +2,7 @@
 const CONFIG = {
     weddingDate: 'June 15, 2026', // Update this with your actual wedding date
     apiEndpoint: 'YOUR_API_ENDPOINT_HERE', // Will be updated when backend is ready
-    turnstileSiteKey: 'YOUR_SITE_KEY_HERE', // Get this from Cloudflare Turnstile
+    turnstileSiteKey: '0x4AAAAAACeLwxreribzyIMX', // Get this from Cloudflare Turnstile
     carouselImages: [
         'https://placehold.co/1920x1080/9caf88/ffffff?text=Photo+1',
         'https://placehold.co/1920x1080/b8c9a8/ffffff?text=Photo+2',
