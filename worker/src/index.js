@@ -30,6 +30,7 @@ export default {
 
         // Validate Turnstile token
         const ip = request.headers.get('CF-Connecting-IP') ?? '';
+        console.log('Secret key present:', !!env.TURNSTILE_SECRET_KEY, 'length:', env.TURNSTILE_SECRET_KEY?.length ?? 0);
         const turnstileValid = await verifyTurnstile(turnstileToken, ip, env.TURNSTILE_SECRET_KEY);
         if (!turnstileValid) {
             return json({ error: 'Security check failed' }, 403);
